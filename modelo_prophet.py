@@ -10,9 +10,9 @@ TABELA_DESTINO = f'{PROJECT_ID}.{DATASET}.{TABELA}'
 
 client = bigquery.Client()
 
-query = """
+query = f"""
     SELECT ano_mes, cambio_medio, ipca, selic_media
-    FROM `dados-financeiros-ufabc.indicadores_bcb.cambio_ipca_selic`
+    FROM `{TABELA_DESTINO}`
     ORDER BY ano_mes
 """
 
