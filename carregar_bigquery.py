@@ -84,6 +84,4 @@ def carregar_bigquery(df, tabela_destino):
 df_final['ano_mes'] = df_final['ano_mes'].astype(str)
 carregar_bigquery(df_final, TABELA_DESTINO)
 tabela = client.get_table(TABELA_DESTINO)
-
-tabela = client.get_table('dados-financeiros-ufabc.indicadores_bcb.cambio_ipca_selic')
 print(f"Carregadas {tabela.num_rows} linhas no BigQuery.")
